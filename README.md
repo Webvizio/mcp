@@ -2,6 +2,7 @@
 
 A TypeScript-based Model Context Protocol (MCP) server that provides secure and structured access to the Webvizio API. This server enables MCP clients to seamlessly interact with Webvizio projects and development tasks through a standardized interface.
 
+Webvizio MCP Server - Automatically converts feedback and bug reports from websites and web apps into actionable, context-enriched developer tasks. Delivered straight to your AI coding tools, the Webvizio MCP Server ensures your AI agent has all the data it needs to solve tasks with speed and accuracy.
 
 ## 📋 Available Tools
 
