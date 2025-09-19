@@ -1,4 +1,11 @@
-# Webvizio MCP Server
+# About Webvizio
+[Webvizio](https://webvizio.com/developers/) streamlines communication between end-users, non-technical teams, and developers. 
+
+Our easy-to-use [browser extension](https://chromewebstore.google.com/detail/webvizio-website-feedback/dpgepcgkiaafcpjnficbigmdmeabhndk) lets you capture visual feedback and bug reports directly on a web page. It then automatically gathers all relevant data and converts it into actionable, context-enriched development tasks for your AI coding agents. 
+
+From non-technical product feedback to bug-free code in seconds, not days. Learn more about Webvizio for developers [here](https://webvizio.com/developers/). 
+
+## Webvizio MCP Server
 
 A TypeScript-based Model Context Protocol (MCP) server that provides secure and structured access to the Webvizio API. This server enables MCP clients to seamlessly interact with Webvizio projects and development tasks through a standardized interface.
 
