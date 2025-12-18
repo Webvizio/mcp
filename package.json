@@ -1,6 +1,6 @@
 {
   "name": "@webvizio/mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A Model-Context-Protocol (MCP) server for the Webvizio API",
   "author": "Webvizio Inc.",
   "license": "MIT",

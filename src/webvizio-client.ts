@@ -173,9 +173,20 @@ export class WebvizioClient {
     }
   }
 
-   /**
-   * Get the prompt for a task
-   */
+  async getTaskErrorLogs(request: WebvizioGetTaskRequest): Promise<string> {
+    try {
+      const response = await this.client.get(`/task/${request.uuid}/error-logs`);
+      if (!response.data?.prompt) {
+        throw new Error('Failed to get error logs prompt');
+      }
+
+      return response.data.prompt;
+    } catch (error) {
+      console.error('[Webvizio API] Error getting error logs prompt:', error);
+      throw error;
+    }
+  }
+
    async getTaskScreenshot(request: WebvizioGetTaskRequest): Promise<string> {
     try {
       const response = await this.client.get(`/task/${request.uuid}/screenshot`);

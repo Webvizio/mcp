@@ -21,6 +21,7 @@ Webvizio MCP Server - Automatically converts feedback and bug reports from websi
 | `get_tasks` | GET | Get the list of open tasks assigned to a user |
 | `get_task_description` | GET | Get the task description |
 | `get_task_prompt` | GET | Get an AI prompt to execute the task |
+| `get_task_error_logs` | GET | Get the task error logs |
 | `get_task_console_logs` | GET | Get the task console logs |
 | `get_task_network_logs` | GET | Get the task network logs |
 | `get_task_action_logs` | GET | Get the task action logs (Repro steps) |

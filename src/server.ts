@@ -16,7 +16,7 @@ export class WebvizioMcpServer {
       description: 'Webvizio MCP server',
       author: 'Webvizio Team',
       homepage: 'https://webvizio.com',
-      repository: 'https://github.com/Webvizio/mcp'
+      // repository: 'https://github.com/webvizio/mcp-server-dev'
     }, {
       instructions:
         "Use this server to manage user tasks and projects in Webvizio. It provides comprehensive information about user tasks to help you complete them efficiently.",
@@ -321,6 +321,45 @@ export class WebvizioMcpServer {
           };
         } catch (error) {
           return this.handleError(error, 'get_task_action_logs'); 
+        }
+      }
+    );
+
+    // Register get_task_error_logs tool
+    this.server.registerTool(
+      'get_task_error_logs',
+      {
+        description: 'Fetches the task error logs which have been added to the task. Use this tool if the task prompt lacks sufficient information for execution. Do not use this tool if the task and its solution methods are entirely clear from the task prompt ', 
+        inputSchema: {
+          uuid: z.string().describe('The uuid of the task to get the error logs for')
+        },
+        annotations: {
+          title: 'Get Task Error Logs'
+        }
+      },
+      async (args: { uuid: string }) => {
+        try {
+          const errorLogs = await this.webvizioClient.getTaskErrorLogs({ uuid: args.uuid });
+          if (!errorLogs) {
+            return {
+              content: [
+                {
+                  type: 'text' as const,
+                  text: 'No error logs found'
+                }
+              ]
+            };
+          }
+          return {
+            content: [
+              {
+                type: 'text' as const,
+                text: `Task error logs:\n\n${errorLogs}`
+              }
+            ]
+          };
+        } catch (error) {
+          return this.handleError(error, 'get_task_error_logs');
         }
       }
     );
