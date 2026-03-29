@@ -58,3 +58,8 @@ Webvizio MCP Server - Automatically converts feedback and bug reports from websi
 4. The AI agent can request the use of tools to gather more information on the task (e.g., screenshots, console logs, etc.). Approve these requests to allow the agent to proceed.
 5. Check the agent's work to ensure the task has been completed correctly.
 6. When the task is complete, ask the AI Agent to close the task.
+
+## Hosted deployment
+
+A hosted deployment is available on [Fronteir AI](https://fronteir.ai/mcp/webvizio-mcp).
+
